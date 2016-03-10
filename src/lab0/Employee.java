@@ -50,7 +50,7 @@ public class Employee {
     // days vacation must be greater than 0 and less than 28
     public final void setDaysVacation(int daysVacation) throws IllegalArgumentException {
         if (daysVacation < MIN_VACATION_DAYS || daysVacation > MAX_VACATION_DAYS){
-            throw new IllegalArgumentException("Vacation Days must be between 1-28 days");
+            throw new IllegalArgumentException("Vacation Days must be between 0-28 days");
         } else
             this.daysVacation = daysVacation;
     }
@@ -64,7 +64,7 @@ public class Employee {
     public final void setFirstName(String firstName) throws IllegalArgumentException {
        if (firstName == null || firstName.isEmpty() ||
                firstName.length() < MIN_FNAME_LENGTH || firstName.length() > MAX_FNAME_LENGTH){
-            throw new IllegalArgumentException("first Name must be between 1-28 days");
+            throw new IllegalArgumentException("first Name must be between 1-20 characters");
         }
         this.firstName = firstName;
     }
@@ -78,7 +78,7 @@ public class Employee {
     public final void setLastName(String lastName) throws IllegalArgumentException {
         if (lastName == null || lastName.isEmpty() ||
                lastName.length() < MIN_LNAME_LENGTH || lastName.length() > MAX_LNAME_LENGTH){
-            throw new IllegalArgumentException("Last Name must be between 1-28 days");
+            throw new IllegalArgumentException("Last Name must be between 1-25 characters");
         } 
         this.firstName = lastName;
     }
